@@ -1,7 +1,11 @@
-(ns beginner-cider-nrepl.core
-  (:gen-class))
+(ns beginner-cider-nrepl.core)
 
-(defn -main
-  "I don't do a whole lot ... yet."
-  [& args]
-  (println "Hello, World!"))
+(defn greet
+  "a function called by app"
+  [x]
+  (concat "Hello there, " x " !!!"))
+
+(defn app [req]
+  {:status 200
+   :headers {"content-Type" "text/html"}
+   :body (greet "Beginner :)")})
