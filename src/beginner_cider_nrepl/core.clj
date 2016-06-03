@@ -3,7 +3,7 @@
 (defn greet
   "a function called by app"
   [x]
-  (concat "Hello there, " x " !!!"))
+  (concat "Hello there, " x " !!!..."))
 
 (defn app [req]
   {:status 200
